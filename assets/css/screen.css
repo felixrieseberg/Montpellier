@@ -107,11 +107,11 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* Import the font file with the icons in it */
 @font-face {
     font-family: "icons";
-    src:url("../fonts/icons.eot");
-    src:url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/icons.woff") format("woff"),
-        url("../fonts/icons.ttf") format("truetype"),
-        url("../fonts/icons.svg#icons") format("svg");
+    src:url("../fonts/icon.eot");
+    src:url("../fonts/icon.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/icon.woff") format("woff"),
+        url("../fonts/icon.ttf") format("truetype"),
+        url("../fonts/icon.svg#icons") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -126,42 +126,107 @@ table { border-collapse: collapse; border-spacing: 0; }
     text-transform: none;
     line-height: 1;
     text-decoration: none !important;
+    /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Each icon is created by inserting the correct character into the
-   content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-    content: "\e000";
-}
-.icon-feed:before {
-    content: "\e001";
-}
-.icon-twitter:before {
-    content: "\e002";
-    font-size: 1.1em;
-}
-.icon-google-plus:before {
-    content: "\e003";
-}
-.icon-facebook:before {
-    content: "\e004";
-}
-.icon-arrow-left:before {
-    content: "\e005";
-}
-.icon-stats:before {
-    content: "\e006";
+.icon-feather:before {
+    content: "\e600";
 }
 .icon-location:before {
-    content: "\e007";
-    margin-left: -3px; /* Tracking fix */
+    content: "\e601";
 }
-.icon-link:before {
-    content: "\e008";
+.icon-earth:before {
+    content: "\e602";
 }
-
+.icon-rss:before {
+    content: "\e603";
+}
+.icon-statistics:before {
+    content: "\e604";
+}
+.icon-arrow-left:before {
+    content: "\e605";
+}
+.icon-arrow-down:before {
+    content: "\e606";
+}
+.icon-arrow-up:before {
+    content: "\e607";
+}
+.icon-arrow-right:before {
+    content: "\e608";
+}
+.icon-cc:before {
+    content: "\e609";
+}
+.icon-cc-by:before {
+    content: "\e60a";
+}
+.icon-cc-nc:before {
+    content: "\e60b";
+}
+.icon-cc-nc-eu:before {
+    content: "\e60c";
+}
+.icon-cc-nc-jp:before {
+    content: "\e60d";
+}
+.icon-cc-sa:before {
+    content: "\e60e";
+}
+.icon-cc-nd:before {
+    content: "\e60f";
+}
+.icon-cc-pd:before {
+    content: "\e610";
+}
+.icon-cc-zero:before {
+    content: "\e611";
+}
+.icon-github:before {
+    content: "\e612";
+}
+.icon-flickr:before {
+    content: "\e613";
+}
+.icon-vimeo:before {
+    content: "\e614";
+}
+.icon-twitter:before {
+    content: "\e615";
+}
+.icon-facebook:before {
+    content: "\e616";
+}
+.icon-googleplus:before {
+    content: "\e617";
+}
+.icon-pinterest:before {
+    content: "\e618";
+}
+.icon-tumblr:before {
+    content: "\e619";
+}
+.icon-linkedin:before {
+    content: "\e61a";
+}
+.icon-dribbble:before {
+    content: "\e61b";
+}
+.icon-stumbleupon:before {
+    content: "\e61c";
+}
+.icon-lastfm:before {
+    content: "\e61d";
+}
+.icon-rdio:before {
+    content: "\e61e";
+}
+.icon-skype:before {
+    content: "\e61f";
+}
 
 /* ==========================================================================
    2. General - Setting up some base styles
@@ -183,7 +248,7 @@ body {
     height: 100%;
     max-height: 100%;
     font-family: "Merriweather", serif;
-    font-size: 1.45em;
+    font-size: 1.6em;
     line-height: 1.7em;
     color: #3A4145;
 }
@@ -285,7 +350,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: #EFEFEF 1px solid;
+    border-top: #ddd 1px solid;
     margin: 3.2em 0;
     padding: 0;
 }
@@ -387,7 +452,7 @@ table td {
     line-height: 20px;
     text-align: left;
     vertical-align: top;
-    border-top: #EFEFEF 1px solid;
+    border-top: #ddd 1px solid;
 }
 
 table th { color: #000; }
@@ -401,7 +466,7 @@ table thead:first-child tr:first-child td {
     border-top: 0;
 }
 
-table tbody + tbody { border-top: #EFEFEF 2px solid; }
+table tbody + tbody { border-top: #ddd 2px solid; }
 
 table table table { background-color: #FFF; }
 
@@ -473,22 +538,14 @@ margin on the iframe, cause it breaks stuff. */
     right: 0;
     margin: 70px auto;
     position: absolute;
-    border: 1px solid #949494;
+    border: 1px solid #ddd;
 }
 
 /* Big cover image on the home page */
 .main-header {
-    position: relative;
     display: table;
     width: 100%;
     height: 100%;
-    margin-bottom: 5rem;
-    text-align: center;
-    background: #222 no-repeat center center;
-    background-size: cover;
-    overflow: hidden;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
 }
 
 .main-header-content h1 {
@@ -499,9 +556,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .main-nav {
-    position: absolute;
-    padding: 35px 40px;
-    margin: 0 0 30px 0;
+    position: relative;
     left: 0;
     right: 0;
 }
@@ -537,15 +592,16 @@ margin on the iframe, cause it breaks stuff. */
     animation: none;
 }
 
-.home-template .main-header:after {
+.main-header:after {
     display: block;
     content: " ";
-    width: 150px;
-    height: 130px;
-    border-radius: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
+    width: 70%;
+    height: 1px;
+    margin-top: 2rem;
+    background-color: #ddd;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Hide when there's no cover image or on page2+ */
@@ -561,6 +617,7 @@ margin on the iframe, cause it breaks stuff. */
     display: block;
     background: none !important;
     border: none !important;
+    text-align: center;
 }
 
 .blog-logo img {
@@ -665,6 +722,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 2.6rem;
     letter-spacing: -1px;
     color: #949494;
+    font-size: 1.5rem;
 }
 
 .page-description {
@@ -708,8 +766,8 @@ margin on the iframe, cause it breaks stuff. */
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width: 80%;
-    max-width: 780px;
+    width: 70%;
+    max-width: 700px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
@@ -724,7 +782,7 @@ margin on the iframe, cause it breaks stuff. */
     content: "";
     width: 7px;
     height: 7px;
-    border: #E7EEF2 1px solid;
+    border: #ddd 1px solid;
     position: absolute;
     bottom: -5px;
     left: 50%;
@@ -734,6 +792,11 @@ margin on the iframe, cause it breaks stuff. */
     -moz-border-radius: 100%;
     border-radius: 100%;
     box-shadow: #FFF 0 0 0 5px;
+}
+
+body:not(.post-template) .post-header {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 body:not(.post-template) .post-title {
@@ -755,10 +818,10 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 2rem 0 0.6rem 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    color: #9EABB3;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Merriweather';
+    font-weight: 300;
 }
 
 .author-thumb {
@@ -770,7 +833,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta a {
-    color: #9EABB3;
+    color: #000;
     text-decoration: none;
 }
 
@@ -786,11 +849,11 @@ body:not(.post-template) .post-title {
 
 .post-date {
     display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
-    border-left: #d5dbde 1px solid;
-    text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .user-image {
@@ -837,6 +900,7 @@ body:not(.post-template) .post-title {
 
 .post-template .post-header {
    margin-bottom: 3.4rem;
+   margin-top: 3.4rem;
 }
 
 .post-template .post-title {
@@ -893,7 +957,7 @@ body:not(.post-template) .post-title {
     position: relative;
     margin: 6rem 0 0 0;
     padding: 6rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
+    border-top: #ddd 1px solid;
 }
 
 .post-footer h4 {
@@ -947,15 +1011,15 @@ body:not(.post-template) .post-title {
     position: absolute;
     top: 6rem;
     right: 0;
-    width: 140px;
 }
 
 .post-footer .share a {
-    font-size: 1.8rem;
+    font-size: 3rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
+    color: #000;
     text-decoration: none;
+    padding-top: 0.5rem;
+    padding-right: 0.8rem;
 }
 
 .post-footer .share a:hover {
@@ -1182,7 +1246,7 @@ body:not(.post-template) .post-title {
 /* The main wrapper for our pagination links */
 .pagination {
     position: relative;
-    width: 80%;
+    width: 70%;
     max-width: 780px;
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
@@ -1202,9 +1266,8 @@ body:not(.post-template) .post-title {
     position: absolute;
     display: inline-block;
     padding: 0 15px;
-    border: #bfc8cd 1px solid;
+    border: #ddd 1px solid;
     text-decoration: none;
-    border-radius: 4px;
     transition: border ease 0.3s;
 }
 
@@ -1269,17 +1332,22 @@ body:not(.post-template) .post-title {
 
 .site-footer {
     position: relative;
-    margin: 8rem 0 0 0;
-    padding: 0.5rem 15px;
-    border-top: #EBF2F6 1px solid;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top: #ddd 1px solid;
     font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.7em;
-    color: #BBC7CC;
+    color: #000;
+    width: 70%;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 6rem;
 }
 
 .site-footer a {
-    color: #BBC7CC;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
 }
@@ -1308,10 +1376,6 @@ body:not(.post-template) .post-title {
 
 @media only screen and (max-width: 1600px) {
 
-    .page-title {
-        font-size: 5rem;
-    }
-
     .page-description {
         font-size: 2rem;
         line-height: 1.5em;
@@ -1328,13 +1392,13 @@ body:not(.post-template) .post-title {
 
     .post,
     .inner,
-    .pagination {
+    .pagination, .site-footer {
         max-width: 710px;
     }
 
     h1, h2, h3,
     h4, h5, h6 {
-        margin: 0 0 0.4em 0;
+        margin: 0 0 0.8em 0;
     }
 
     h1 {
@@ -1401,11 +1465,6 @@ body:not(.post-template) .post-title {
 
     .blog-logo img {
         padding: 4px 0;
-    }
-
-    .page-title {
-        font-size: 4rem;
-        letter-spacing: -1px;
     }
 
     .page-description {
@@ -1569,6 +1628,10 @@ body:not(.post-template) .post-title {
         margin: 2rem auto;
     }
 
+    .site-footer {
+        width: auto;
+    }
+
     .post {
         width: auto;
         margin-top: 2rem;
@@ -1598,10 +1661,6 @@ body:not(.post-template) .post-title {
     p, ul, ol, dl {
         font-size: 0.95em;
         margin: 0 0 2rem 0;
-    }
-
-    .page-title {
-        font-size: 3rem;
     }
 
     .page-description {
