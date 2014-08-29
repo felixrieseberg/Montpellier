@@ -595,9 +595,9 @@ margin on the iframe, cause it breaks stuff. */
 .main-header:after {
     display: block;
     content: " ";
-    width: 70%;
+    width: 90%;
     height: 1px;
-    margin-top: 2rem;
+    margin-top: 4rem;
     background-color: #ddd;
     position: relative;
     margin-left: auto;
@@ -799,10 +799,6 @@ body:not(.post-template) .post-header {
     margin-bottom: 2em;
 }
 
-body:not(.post-template) .post-title {
-    font-size: 2rem;
-}
-
 .post-title a {
     text-decoration: none;
 }
@@ -854,6 +850,12 @@ body:not(.post-template) .post-title {
     font-style: italic;
     font-weight: 300;
     letter-spacing: 2px;
+}
+
+.post-featured-image img {
+    width: 126%;
+    max-width: none;
+    margin: 0 -13% 2rem;
 }
 
 .user-image {
