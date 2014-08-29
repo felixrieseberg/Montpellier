@@ -1,8 +1,15 @@
 {{! Header }}
 <header class="main-header">
     <div class="main-nav clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
+        {{#if @blog.logo}}
+            <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
         {{/if}}
+        {{#unless @blog.logo}}
+            {{! -- EDIT HERE ------------------------------------------ }}
+            {{! -- Replace `WN` with letters of your choice ----------- }}
+            <a class="blog-logo-text" href="{{@blog.url}}"><h1>WN</h1></a>
+            {{! -- STOP EDITING HERE ---------------------------------- }}
+        {{/unless}}
     </div>
     <div class="vertical">
         <div class="main-header-content inner">

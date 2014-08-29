@@ -633,6 +633,19 @@ margin on the iframe, cause it breaks stuff. */
     margin-right: auto;
 }
 
+.blog-logo-text {
+    width: 100%;
+}
+
+.blog-logo-text h1 {
+    font-family: 'Rozha One', serif;
+    font-size: 16rem;
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 0 0 -3rem 0;
+    font-weight: normal;
+}
+
 .back-button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
