@@ -1,6 +1,6 @@
 # Montpellier
 
-A WIP Theme for Ghost. It's not done yet... Please go away.
+A theme for Ghost, classy & loosely based on Casper. It's not done yet, but almost ready. You probably shouldn't use it just yet.
 
 ## Copyright & License
 
