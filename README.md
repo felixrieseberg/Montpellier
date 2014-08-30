@@ -7,9 +7,9 @@ In honor of the inventor of the first noiseless typewriter, 'Wellington' is a qu
 The general look and feel is stolen from various classy designs and is supposed to feel very 'high gloss magazine'.
 
 ## Features
-- Customizable Logo: The logo is based on the free Google Font ‘[Rozha One](http://www.google.com/fonts/specimen/Rozha+One)’. I recommend creating an image-based logo, but a CSS-only option is available.
-- Disqus Comments
-- Menu for Static Pages
+- Customizable Logo: The logo is based on the free Google Font ‘[Rozha One](http://www.google.com/fonts/specimen/Rozha+One)’. I recommend creating an image-based logo, but a CSS-only option is available. If no image logo is present, the theme will automatically include the font using Google Fonts and use the title set in `/partials/header.hsb`.
+- Menu for Static Pages: A menu for static pages can be used. Since Ghost currently lacks APIs to query for static pages, a bit of manual work is required. The file `/partials/header.hsb` allows configuration of the menu.
+- Sharing Buttons: Twitter, Facebook & Google Plus are already enabled sharing options, but
 
 ## Copyright & License
 

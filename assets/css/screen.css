@@ -566,6 +566,28 @@ margin on the iframe, cause it breaks stuff. */
     font-family: 'Open Sans', sans-serif;
 }
 
+.static-nav {
+    text-align: center;
+}
+
+.static-nav li {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 5px .5rem 0 .5rem;
+}
+
+.static-nav li a {
+    color: #4A4A4A;
+    text-decoration: none;
+}
+
+.static-nav li a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
     display: block;
