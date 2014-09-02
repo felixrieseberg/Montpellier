@@ -568,6 +568,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .static-nav {
     text-align: center;
+    padding: 0;
 }
 
 .static-nav li {
@@ -1488,9 +1489,7 @@ body:not(.post-template) .post-header {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: auto;
-        min-height: 240px;
         height: 60%;
-        padding: 15% 0;
     }
 
     .scroll-down { display: none; }
@@ -1502,6 +1501,10 @@ body:not(.post-template) .post-header {
 
     .blog-logo img {
         padding: 4px 0;
+    }
+
+    .blog-logo-text h1 {
+        font-size: 14rem;
     }
 
     .page-description {
@@ -1585,6 +1588,7 @@ body:not(.post-template) .post-header {
 @media only screen and (max-width: 500px) {
 
     .main-header {
+        padding: 0;
         margin-bottom: 0;
         height: 40%;
     }
@@ -1599,10 +1603,13 @@ body:not(.post-template) .post-header {
         padding: 10% 0;
     }
 
+    .main-header:after {
+        margin-top: 0;
+    }
+
     .main-nav {
         padding: 0;
-        margin-bottom: 2rem;
-        border-bottom: #e0e4e7 1px solid;
+        margin-bottom: -3rem;
     }
 
     .blog-logo {
@@ -1659,14 +1666,15 @@ body:not(.post-template) .post-header {
         max-height: 100px;
     }
 
+    .blog-logo-text h1 {
+        font-size: 12rem;
+        margin: 0 0 0 0;
+    }
+
     .inner,
     .pagination {
         width: auto;
         margin: 2rem auto;
-    }
-
-    .site-footer {
-        width: auto;
     }
 
     .post {
@@ -1681,6 +1689,11 @@ body:not(.post-template) .post-header {
 
     .post-date {
         display: none;
+    }
+
+    .post-featured-image img {
+        width: 100%;
+        margin: 0 0 2rem;
     }
 
     .post-template .post-header {
