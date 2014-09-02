@@ -1,4 +1,6 @@
 {
   "name": "Wellington",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "author": "Felix Rieseberg",
+  "homepage": "https://github.com/felixrieseberg/Wellington"
 }
